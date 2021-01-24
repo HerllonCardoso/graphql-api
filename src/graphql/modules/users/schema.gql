@@ -1,8 +1,9 @@
 type User {
   _id: ID!
   firstName: String!
-  lastLame: String!
-  email: String!
+  lastName: String!
+  fullName: String!
+  email: String
   active: Boolean!
 }
 
@@ -22,4 +23,8 @@ type Mutation {
   createUser(data: UserInput!): User!
   updateUser(id: ID, data: UserInput!): User!
   deleteUser(id: ID!): Boolean
+}
+
+type Subscription {
+  userAdded: User!
 }
